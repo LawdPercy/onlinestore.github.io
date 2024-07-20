@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store - My Online Store</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/css/store.css">
+</head>
+<body>
+    <header>
+        <h1>Our Products</h1>
+        <nav>
+            <ul id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="store.html">Store</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li id="profile-link" style="display: none;"><a href="profile.html">Profile</a></li>
+                <li id="logout-link" style="display: none;"><a href="#" onclick="logout()">Logout</a></li>
+                <li id="login-register-link"><a href="login.html">Login/Register</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <aside>
+            <h2>Categories</h2>
+            <ul id="category-list">
+                <li><a href="#" onclick="filterProducts('electronics')">Adhesive</a></li>
+                <li><a href="#" onclick="filterProducts('clothing')">Books, Pads & Flags</a></li>
+                <li><a href="#" onclick="filterProducts('books')">Canteen & Janitorial Supplies</a></li>
+                <li><a href="#" onclick="filterProducts('home')">Clips,Pins & Gripbinders</a></li>
+                <li><a href="#" onclick="filterProducts('home')">Company Specific Products</a></li>
+                <li><a href="#" onclick="filterProducts('home')">Computer Print Consumables</a></li>
+                <li><a href="#" onclick="filterProducts('home')">Correction Materials</a></li>
+                <li><a href="#" onclick="filterProducts('home')">Filing</a></li>
+                <li><a href="#" onclick="filterProducts('home')">General Accessories</a></li>
+                <li><a href="#" onclick="filterProducts('home')">Highlighters</a></li>
+                <li><a href="#" onclick="filterProducts('home')">Labels</a></li>
+                <li><a href="#" onclick="filterProducts('home')">Legal Forms</a></li>
+                <li><a href="#" onclick="filterProducts('home')">Markers</a></li>
+                <li><a href="#" onclick="filterProducts('home')">Paper Products</a></li>
+                <li><a href="#" onclick="filterProducts('home')">Punches</a></li>
+                <li><a href="#" onclick="filterProducts('home')">Stapling Products</a></li>
+                <li><a href="#" onclick="filterProducts('home')">Writing Instrumentss</a></li>
+                <!-- Add more categories as needed -->
+            </ul>
+        </aside>
+        <div class="container">
+            <div class="product-list" id="product-list">
+                <!-- Example Product -->
+                <div class="product" data-category="electronics">
+                    <img src="path-to-image.jpg" alt="Product Image">
+                    <h3>Product Name</h3>
+                    <p>Description of the product goes here.</p>
+                    <p>Price: $19.99</p>
+                    <button>Add to Cart</button>
+                </div>
+                <!-- Repeat for other products -->
+            </div>
+            <div class="product-list" id="product-list">
+                <!-- Example Product -->
+                <div class="product" data-category="electronics">
+                    <img src="path-to-image.jpg" alt="Product Image">
+                    <h3>Product Name</h3>
+                    <p>Description of the product goes here.</p>
+                    <p>Price: $19.99</p>
+                    <button>Add to Cart</button>
+                </div>
+                <!-- Repeat for other products -->
+            </div>
+            <div class="product-list" id="product-list">
+                <!-- Example Product -->
+                <div class="product" data-category="electronics">
+                    <img src="path-to-image.jpg" alt="Product Image">
+                    <h3>Product Name</h3>
+                    <p>Description of the product goes here.</p>
+                    <p>Price: $19.99</p>
+                    <button>Add to Cart</button>
+                </div>
+                <!-- Repeat for other products -->
+            </div>
+            <div class="product-list" id="product-list">
+                <!-- Example Product -->
+                <div class="product" data-category="electronics">
+                    <img src="path-to-image.jpg" alt="Product Image">
+                    <h3>Product Name</h3>
+                    <p>Description of the product goes here.</p>
+                    <p>Price: $19.99</p>
+                    <button>Add to Cart</button>
+                </div>
+        </div>
+       
+            <!-- Repeat for other products -->
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 My Online Store. All rights reserved.</p>
+        <ul>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>
