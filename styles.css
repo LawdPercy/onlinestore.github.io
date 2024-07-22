@@ -1,0 +1,191 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+header {
+    background-color: #16264c;
+    color: #fff;
+    padding: 15px 0;
+    text-align: center;
+}
+.menu-toggle {
+    display: none; /* Hidden by default; will be shown on smaller screens */
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    margin-left: auto;
+    z-index: 1000;
+}
+.bar {
+    height: 4px;
+    background: #fff;
+    margin: 5px 0;
+    transition: 0.3s;
+}
+.menu-toggle.active .bar:nth-child(1) {
+    transform: rotate(45deg) translateY(9px);
+}
+
+.menu-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translateY(-9px);
+}
+nav {
+    flex: 1;
+}
+.close-btn {
+    display: none; /* Hidden by default; shown when menu is open */
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #fff;
+    background: transparent;
+    border: none;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff9800;
+}
+
+.products:hover {
+    transform: translateY(-5px);
+}
+
+.products img {
+    max-width: 100%;
+    height: auto;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #ff9800;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #e68900;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form label {
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+form input, form textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+form button {
+    width: 100%;
+    padding: 12px;
+}
+
+footer {
+    background-color: #16264c;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+footer ul li {
+    margin: 0 10px;
+}
+
+footer ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer ul li a:hover {
+    color: #ff9800;
+}
+/**/
+/**/
+/**/
+/**/
+/**/
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+        display: block;
+    }
+
+    #nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        height: 200px;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background: #e68900;
+        padding: 20px;
+        z-index: 1;
+    }
+
+    #nav-links.nav-menu-active {
+        display: flex;
+    }
+    .close-btn {
+        display: block; /* Show close button when menu is open */
+    
+    }
+}

@@ -1,0 +1,1156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store - My Online Store</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="store.css">
+</head>
+<body>
+    <header>
+        <h1>LOGO</h1>
+        <div class="menu-toggle" id="menu-toggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <nav>
+            <ul id="nav-links">
+                <li class="close-btn" id="close-btn">&times;</li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="store.html">Store</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li id="profile-link" style="display: none;"><a href="profile.html">Profile</a></li>
+                <li id="logout-link" style="display: none;"><a href="#" onclick="logout()">Logout</a></li>
+                <li id="login-register-link"><a href="login.html">Login/Register</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!--cart -->
+        <div class="cart">
+            <h2>Shopping Cart</h2>
+            <ul id="cart-items">
+                <!-- Cart items will be added here -->
+            </ul>
+            <p class="total-price"><strong>Total Price:</strong> <span id="total-price">0.00</span></p>
+            <button onclick="clearCart()">Clear Cart</button>
+            <button onclick="checkout()">Checkout</button>
+        </div>
+        <!--cart -->
+        <!------------------------------------------------------------------------------------------------------------------ -->
+        <!------------------------------------------------------------------------------------------------------------------ -->
+        <!------------------------------------------------------------------------------------------------------------------ -->
+        <!--cart -->
+        <section class="storeItems">
+             <!--category list -->
+             <aside>
+                <button class="categories" data-target="category-list">Categories</button>
+                <div class="category-list" id="category-list">
+                    <button onclick="showGroup('adhesive')">Adhesive</button>
+                    <button onclick="showGroup('books')">Books, Pads & Flags</button>
+                    <button onclick="showGroup('canteen')">Canteen & Janitorals Supplies</button>
+                    <button onclick="showGroup('clips')">Clips, Pins & Gripbinders</button>
+                    <button onclick="showGroup('company')">Company specific Products</button>
+                    <button onclick="showGroup('computer')">Computer Print Consumables</button>
+                    <button onclick="showGroup('correction')">Correction Materials</button>
+                    <button onclick="showGroup('filing')">Filing</button>
+                    <button onclick="showGroup('accessories')">General Accessories</button>
+                    <button onclick="showGroup('highlighters')">Highlighters</button>
+                    <button onclick="showGroup('labels')">Labels</button>
+                    <button onclick="showGroup('legal')">Legal Forms</button>
+                    <button onclick="showGroup('markers')">Markers</button>
+                    <button onclick="showGroup('paper')">Paper Products</button>
+                    <button onclick="showGroup('punches')">Punches</button>
+                    <button onclick="showGroup('stapling')">Stapling Products</button>
+                    <button onclick="showGroup('writing')">Writing Instruments</button>
+                    <!-- Add more categories as needed -->
+                </div>
+            </aside>
+                    <!------------------------------------------------------------------------------------------------------------------ -->
+                    <!------------------------------------------------------------------------------------------------------------------ -->
+        <!-- All Items Container -->
+        <!-- All Items Container -->
+
+            <div class="container">
+                 <!-- Adhesive products -->
+                <div class="product" id="adhesive" data-category="adhesive">
+                     <!--1-->
+                     <div class="product-listing" data-product-id="1" data-product-price="19.94">
+                        <img src="https://via.placeholder.com/150" alt="Product 1">
+                        <h2>Adhesive Gum</h2>
+                        <p><strong>Stock Type:</strong> In Stock</p>
+                        <p><strong>Reference:</strong> N/A</p>
+                        <p><strong>Brand:</strong> Bostik</p>
+                        <p><strong>Description:</strong> This is a high-quality product that serves multiple purposes.</p>
+                        <p><strong>Colour:</strong> N/A</p>
+                        <p><strong>UOM:</strong> Each</p>
+                        <p class="price"><strong>Price:</strong> R<span class="product-price">19.94</span></p>
+                        <div class="quantity">
+                            <button onclick="decreaseQuantity(this)">-</button>
+                            <span class="quantity-value">1</span>
+                            <button onclick="increaseQuantity(this)">+</button>
+                        </div>
+                        <div class="buttons">
+                            <button onclick="addToCart(this)">Add to Cart</button>
+                        </div>
+                    </div>
+                    <!------------------------------------------------------------------------------------------------------------------ -->
+
+                     <!--2-->
+                     <div class="product-listing" data-product-id="2" data-product-price="36.88">
+                        <img src="https://via.placeholder.com/150" alt="Product 2">
+                        <h2>Glue Sticks</h2>
+                        <p><strong>Stock Type:</strong> In Stock</p>
+                        <p><strong>Reference:</strong> N/A</p>
+                        <p><strong>Brand:</strong> Pritt</p>
+                        <p><strong>Description:</strong> Glue Sticks 43g</p>
+                        <p><strong>Colour:</strong> N/A</p>
+                        <p><strong>UOM:</strong> Each</p>
+                        <p class="price"><strong>Price:</strong> R<span class="product-price">36.88</span></p>
+                        <div class="quantity">
+                            <button onclick="decreaseQuantity(this)">-</button>
+                            <span class="quantity-value">1</span>
+                            <button onclick="increaseQuantity(this)">+</button>
+                        </div>
+                        <div class="buttons">
+                            <button onclick="addToCart(this)">Add to Cart</button>
+                        </div>
+                    </div>
+           <!------------------------------------------------------------------------------------------------------------------ -->
+
+                    <!-- -->
+                     <!--3-->
+                     <div class="product-listing" data-product-id="3" data-product-price="8.53">
+                        <img src="https://via.placeholder.com/150" alt="Product 3">
+                        <h2>Clear Tape</h2>
+                        <p><strong>Stock Type:</strong> In Stock</p>
+                        <p><strong>Reference:</strong> N/A</p>
+                        <p><strong>Brand:</strong> N/A</p>
+                        <p><strong>Description:</strong> Clear Tape 18mm x 66m Large Core (NOT AVAIALBLE IN JHB)</p>
+                        <p><strong>Colour:</strong> Clear</p>
+                        <p><strong>UOM:</strong> Each</p>
+                        <p class="price"><strong>Price:</strong> R<span class="product-price">8.53</span></p>
+                        <div class="quantity">
+                            <button onclick="decreaseQuantity(this)">-</button>
+                            <span class="quantity-value">1</span>
+                            <button onclick="increaseQuantity(this)">+</button>
+                        </div>
+                        <div class="buttons">
+                            <button onclick="addToCart(this)">Add to Cart</button>
+                        </div>
+                    </div>
+                     <!-- -->
+             <!------------------------------------------------------------------------------------------------------------------ -->
+
+                     <!--4-->
+                     <div class="product-listing" data-product-id="4" data-product-price="10.94">
+                        <img src="https://via.placeholder.com/150" alt="Product 4">
+                        <h2>Packaging Tape</h2>
+                        <p><strong>Stock Type:</strong> In Stock</p>
+                        <p><strong>Reference:</strong> N/A</p>
+                        <p><strong>Brand:</strong> N/A</p>
+                        <p><strong>Description:</strong> Packaging Tape 48mm x 50m</p>
+                        <p><strong>Colour:</strong> Buff</p>
+                        <p><strong>UOM:</strong> Each</p>
+                        <p class="price"><strong>Price:</strong> R<span class="product-price">10.94</span></p>
+                        <div class="quantity">
+                            <button onclick="decreaseQuantity(this)">-</button>
+                            <span class="quantity-value">1</span>
+                            <button onclick="increaseQuantity(this)">+</button>
+                        </div>
+                        <div class="buttons">
+                            <button onclick="addToCart(this)">Add to Cart</button>
+                        </div>
+                    </div>
+                     <!-- -->
+                     <!-- Add more adhesive products here -->
+                </div>
+               
+        <!------------------------------------------------------------------------------------------------------------------ -->
+         <!------------------------------------------------------------------------------------------------------------------ -->
+
+                   
+                
+
+                <!-- Books Products -->
+                <!-- Books Products -->
+                <div class="product" id="books" data-category="books">
+                          <!--5-->
+                          <div class="product-listing" data-product-id="5" data-product-price="13.50">
+                            <img src="https://via.placeholder.com/150" alt="Product 5">
+                            <h2>Attendance Registers</h2>
+                            <p><strong>Stock Type:</strong> In Stock</p>
+                            <p><strong>Reference:</strong> JD283</p>
+                            <p><strong>Brand:</strong> Croxley</p>
+                            <p><strong>Description:</strong> Attendance Registers (A4) 14 Leaves Manilla Cover Wire Stitched-Folio</p>
+                            <p><strong>Colour:</strong> N/A</p>
+                            <p><strong>UOM:</strong> Each</p>
+                            <p class="price"><strong>Price:</strong> R<span class="product-price">13.50</span></p>
+                            <div class="quantity">
+                                <button onclick="decreaseQuantity(this)">-</button>
+                                <span class="quantity-value">1</span>
+                                <button onclick="increaseQuantity(this)">+</button>
+                            </div>
+                            <div class="buttons">
+                                <button onclick="addToCart(this)">Add to Cart</button>
+                            </div>
+                        </div>
+                         <!-- -->
+                    <!------------------------------------------------------------------------------------------------------------------ -->
+
+                          <!--6-->
+                          <div class="product-listing" data-product-id="6" data-product-price="35.20">
+                            <img src="https://via.placeholder.com/150" alt="Product 6">
+                            <h2>Carbon Books</h2>
+                            <p><strong>Stock Type:</strong> In Stock</p>
+                            <p><strong>Reference:</strong> JD66PR</p>
+                            <p><strong>Brand:</strong> Croxley</p>
+                            <p><strong>Description:</strong> Triplicate Pen Carbon Books (A5) P.R. Delivery (50 Leaves)</p>
+                            <p><strong>Colour:</strong> N/A</p>
+                            <p><strong>UOM:</strong> Each</p>
+                            <p class="price"><strong>Price:</strong> R<span class="product-price">35.20</span></p>
+                            <div class="quantity">
+                                <button onclick="decreaseQuantity(this)">-</button>
+                                <span class="quantity-value">1</span>
+                                <button onclick="increaseQuantity(this)">+</button>
+                            </div>
+                            <div class="buttons">
+                                <button onclick="addToCart(this)">Add to Cart</button>
+                            </div>
+                        </div>
+                         <!-- -->
+                        <!------------------------------------------------------------------------------------------------------------------ -->
+
+                          <!--7-->
+                          <div class="product-listing" data-product-id="7" data-product-price="10.63">
+                            <img src="https://via.placeholder.com/150" alt="Product 7">
+                            <h2>Hardcover Books</h2>
+                            <p><strong>Stock Type:</strong> In Stock</p>
+                            <p><strong>Reference:</strong> N/A</p>
+                            <p><strong>Brand:</strong> N/A</p>
+                            <p><strong>Description:</strong> Manuscript Books A5 (Hard Cover) Feint & Margin 192p</p>
+                            <p><strong>Colour:</strong> Black</p>
+                            <p><strong>UOM:</strong> Each</p>
+                            <p class="price"><strong>Price:</strong> R<span class="product-price">10.63</span></p>
+                            <div class="quantity">
+                                <button onclick="decreaseQuantity(this)">-</button>
+                                <span class="quantity-value">1</span>
+                                <button onclick="increaseQuantity(this)">+</button>
+                            </div>
+                            <div class="buttons">
+                                <button onclick="addToCart(this)">Add to Cart</button>
+                            </div>
+                        </div>
+                         <!-- -->
+                    <!------------------------------------------------------------------------------------------------------------------ -->
+
+                          <!--8-->
+                        <div class="product-listing" data-product-id="8" data-product-price="18.39">
+                            <img src="https://via.placeholder.com/150" alt="Product 8">
+                            <h2>Glue Sticks</h2>
+                            <p><strong>Stock Type:</strong> In Stock</p>
+                            <p><strong>Reference:</strong> N/A</p>
+                            <p><strong>Brand:</strong> N/A</p>
+                            <p><strong>Description:</strong> Counter Books A4 (Hard Cover) Feint & Margin 192p</p>
+                            <p><strong>Colour:</strong> Black</p>
+                            <p><strong>UOM:</strong> Each</p>
+                            <p class="price"><strong>Price:</strong> R<span class="product-price">18.39</span></p>
+                            <div class="quantity">
+                                <button onclick="decreaseQuantity(this)">-</button>
+                                <span class="quantity-value">1</span>
+                                <button onclick="increaseQuantity(this)">+</button>
+                            </div>
+                               <div class="buttons">
+                                    <button onclick="addToCart(this)">Add to Cart</button>
+                               </div>
+                        </div>
+                         <!-- -->
+              
+                    <!-- Add more books products here -->
+                </div>
+        <!------------------------------------------------------------------------------------------------------------------ -->
+        <!------------------------------------------------------------------------------------------------------------------ -->
+
+                <!-- Canteen Products -->
+                <div class="product" id="canteen" data-category="canteen">
+                              <!--9-->
+                              <div class="product-listing" data-product-id="9" data-product-price="44.00">
+                                <img src="https://via.placeholder.com/150" alt="Product 9">
+                                <h2>Furniture Polish</h2>
+                                <p><strong>Stock Type:</strong> In Stock</p>
+                                <p><strong>Reference:</strong> N/A</p>
+                                <p><strong>Brand:</strong> Mr Min</p>
+                                <p><strong>Description:</strong> Furniture Polish Mr Min - 275ml</p>
+                                <p><strong>Colour:</strong> N/A</p>
+                                <p><strong>UOM:</strong> Each</p>
+                                <p class="price"><strong>Price:</strong> R<span class="product-price">44.00</span></p>
+                                <div class="quantity">
+                                    <button onclick="decreaseQuantity(this)">-</button>
+                                    <span class="quantity-value">1</span>
+                                    <button onclick="increaseQuantity(this)">+</button>
+                                </div>
+                                   <div class="buttons">
+                                        <button onclick="addToCart(this)">Add to Cart</button>
+                                   </div>
+                            </div>
+                             <!-- -->
+                 <!------------------------------------------------------------------------------------------------------------------ -->
+
+                              <!--10-->
+                              <div class="product-listing" data-product-id="10" data-product-price="25.54">
+                                <img src="https://via.placeholder.com/150" alt="Product 10">
+                                <h2>Air Freshner</h2>
+                                <p><strong>Stock Type:</strong> In Stock</p>
+                                <p><strong>Reference:</strong> N/A</p>
+                                <p><strong>Brand:</strong> Airoma</p>
+                                <p><strong>Description:</strong> Air Freshner Airoma - 225ml</p>
+                                <p><strong>Colour:</strong> N/A</p>
+                                <p><strong>UOM:</strong> Each</p>
+                                <p class="price"><strong>Price:</strong> R<span class="product-price">25.54</span></p>
+                                <div class="quantity">
+                                    <button onclick="decreaseQuantity(this)">-</button>
+                                    <span class="quantity-value">1</span>
+                                    <button onclick="increaseQuantity(this)">+</button>
+                                </div>
+                                   <div class="buttons">
+                                        <button onclick="addToCart(this)">Add to Cart</button>
+                                   </div>
+                            </div>
+                             <!-- -->
+                        <!------------------------------------------------------------------------------------------------------------------ -->
+
+                              <!--11-->
+                              <div class="product-listing" data-product-id="11" data-product-price="18.06">
+                                <img src="https://via.placeholder.com/150" alt="Product 11">
+                                <h2>Spray Bottle</h2>
+                                <p><strong>Stock Type:</strong> In Stock</p>
+                                <p><strong>Reference:</strong> N/A</p>
+                                <p><strong>Brand:</strong> N/A</p>
+                                <p><strong>Description:</strong> Spray Bottle  750ml</p>
+                                <p><strong>Colour:</strong> N/A</p>
+                                <p><strong>UOM:</strong> Each</p>
+                                <p class="price"><strong>Price:</strong> R<span class="product-price">18.06</span></p>
+                                <div class="quantity">
+                                    <button onclick="decreaseQuantity(this)">-</button>
+                                    <span class="quantity-value">1</span>
+                                    <button onclick="increaseQuantity(this)">+</button>
+                                </div>
+                                   <div class="buttons">
+                                        <button onclick="addToCart(this)">Add to Cart</button>
+                                   </div>
+                            </div>
+                             <!-- -->
+                        <!------------------------------------------------------------------------------------------------------------------ -->
+
+                              <!--12-->
+                              <div class="product-listing" data-product-id="12" data-product-price="10.32">
+                                <img src="https://via.placeholder.com/150" alt="Product 12">
+                                <h2>Sponge Scourers</h2>
+                                <p><strong>Stock Type:</strong> In Stock</p>
+                                <p><strong>Reference:</strong> N/A</p>
+                                <p><strong>Brand:</strong> N/A</p>
+                                <p><strong>Description:</strong> Sponge Scourers </p>
+                                <p><strong>Colour:</strong> Green</p>
+                                <p><strong>UOM:</strong> 3's pack</p>
+                                <p class="price"><strong>Price:</strong> R<span class="product-price">10.32</span></p>
+                                <div class="quantity">
+                                    <button onclick="decreaseQuantity(this)">-</button>
+                                    <span class="quantity-value">1</span>
+                                    <button onclick="increaseQuantity(this)">+</button>
+                                </div>
+                                   <div class="buttons">
+                                        <button onclick="addToCart(this)">Add to Cart</button>
+                                   </div>
+                            </div>
+                             <!-- -->
+                        <!------------------------------------------------------------------------------------------------------------------ -->
+
+                              <!--13-->
+                              <div class="product-listing" data-product-id="13" data-product-price="27.57">
+                                <img src="https://via.placeholder.com/150" alt="Product 13">
+                                <h2>Absorbent Cloths</h2>
+                                <p><strong>Stock Type:</strong> In Stock</p>
+                                <p><strong>Reference:</strong> N/A</p>
+                                <p><strong>Brand:</strong> N/A</p>
+                                <p><strong>Description:</strong> Absorbent Cloths Assorted Pkt 25</p>
+                                <p><strong>Colour:</strong> N/A</p>
+                                <p><strong>UOM:</strong> Each</p>
+                                <p class="price"><strong>Price:</strong> R<span class="product-price">27.57</span></p>
+                                <div class="quantity">
+                                    <button onclick="decreaseQuantity(this)">-</button>
+                                    <span class="quantity-value">1</span>
+                                    <button onclick="increaseQuantity(this)">+</button>
+                                </div>
+                                   <div class="buttons">
+                                        <button onclick="addToCart(this)">Add to Cart</button>
+                                   </div>
+                            </div>
+                             <!-- -->
+            
+                     <!------------------------------------------------------------------------------------------------------------------ -->
+
+                              <!--14-->
+                              <div class="product-listing" data-product-id="14" data-product-price="136.85">
+                                <img src="https://via.placeholder.com/150" alt="Product 14">
+                                <h2>Terry Dish Cloths</h2>
+                                <p><strong>Stock Type:</strong> In Stock</p>
+                                <p><strong>Reference:</strong> N/A</p>
+                                <p><strong>Brand:</strong> N/A</p>
+                                <p><strong>Description:</strong> Terry Dish Cloths 100% Cotton - Pkt 3</p>
+                                <p><strong>Colour:</strong> N/A</p>
+                                <p><strong>UOM:</strong> Packet</p>
+                                <p class="price"><strong>Price:</strong> R<span class="product-price">136.85</span></p>
+                                <div class="quantity">
+                                    <button onclick="decreaseQuantity(this)">-</button>
+                                    <span class="quantity-value">1</span>
+                                    <button onclick="increaseQuantity(this)">+</button>
+                                </div>
+                                   <div class="buttons">
+                                        <button onclick="addToCart(this)">Add to Cart</button>
+                                   </div>
+                            </div>
+                             <!-- -->
+                     <!------------------------------------------------------------------------------------------------------------------ -->
+
+                              <!--15-->
+                              <div class="product-listing" data-product-id="15" data-product-price="33.66">
+                                <img src="https://via.placeholder.com/150" alt="Product 15">
+                                <h2>Yellow Dusters</h2>
+                                <p><strong>Stock Type:</strong> In Stock</p>
+                                <p><strong>Reference:</strong> N/A</p>
+                                <p><strong>Brand:</strong> N/A</p>
+                                <p><strong>Description:</strong> Yellow Dusters Pkt 10</p>
+                                <p><strong>Colour:</strong> N/A</p>
+                                <p><strong>UOM:</strong> Each</p>
+                                <p class="price"><strong>Price:</strong> R<span class="product-price">33.66</span></p>
+                                <div class="quantity">
+                                    <button onclick="decreaseQuantity(this)">-</button>
+                                    <span class="quantity-value">1</span>
+                                    <button onclick="increaseQuantity(this)">+</button>
+                                </div>
+                                   <div class="buttons">
+                                        <button onclick="addToCart(this)">Add to Cart</button>
+                                   </div>
+                            </div>
+                             <!-- -->
+                 <!------------------------------------------------------------------------------------------------------------------ -->
+
+                              <!--16-->
+                              <div class="product-listing" data-product-id="16" data-product-price="49.00">
+                                <img src="https://via.placeholder.com/150" alt="Product 16">
+                                <h2>Plastic Bucket</h2>
+                                <p><strong>Stock Type:</strong> In Stock</p>
+                                <p><strong>Reference:</strong> N/A</p>
+                                <p><strong>Brand:</strong> N/A</p>
+                                <p><strong>Description:</strong> Plastic Bucket 10 Litre</p>
+                                <p><strong>Colour:</strong> N/A</p>
+                                <p><strong>UOM:</strong> Each</p>
+                                <p class="price"><strong>Price:</strong> R<span class="product-price">49.00</span></p>
+                                <div class="quantity">
+                                    <button onclick="decreaseQuantity(this)">-</button>
+                                    <span class="quantity-value">1</span>
+                                    <button onclick="increaseQuantity(this)">+</button>
+                                </div>
+                                   <div class="buttons">
+                                        <button onclick="addToCart(this)">Add to Cart</button>
+                                   </div>
+                            </div>
+                             <!-- -->
+                            <!------------------------------------------------------------------------------------------------------------------ -->
+
+                              <!--17-->
+                              <div class="product-listing" data-product-id="17" data-product-price="83.95">
+                                <img src="https://via.placeholder.com/150" alt="Product 17">
+                                <h2>Feather Duster</h2>
+                                <p><strong>Stock Type:</strong> In Stock</p>
+                                <p><strong>Reference:</strong> N/A</p>
+                                <p><strong>Brand:</strong> N/A</p>
+                                <p><strong>Description:</strong> Feather Duster - 900mm </p>
+                                <p><strong>Colour:</strong> N/A</p>
+                                <p><strong>UOM:</strong> Each</p>
+                                <p class="price"><strong>Price:</strong> R<span class="product-price">83.95</span></p>
+                                <div class="quantity">
+                                    <button onclick="decreaseQuantity(this)">-</button>
+                                    <span class="quantity-value">1</span>
+                                    <button onclick="increaseQuantity(this)">+</button>
+                                </div>
+                                   <div class="buttons">
+                                        <button onclick="addToCart(this)">Add to Cart</button>
+                                   </div>
+                            </div>
+                             <!-- -->
+                      <!------------------------------------------------------------------------------------------------------------------ -->
+
+                              <!--18-->
+                              <div class="product-listing" data-product-id="18" data-product-price="82.80">
+                                <img src="https://via.placeholder.com/150" alt="Product 18">
+                                <h2>Feather Duster Long</h2>
+                                <p><strong>Stock Type:</strong> In Stock</p>
+                                <p><strong>Reference:</strong> N/A</p>
+                                <p><strong>Brand:</strong> N/A</p>
+                                <p><strong>Description:</strong> Feather Duster Long - 1840m</p>
+                                <p><strong>Colour:</strong> N/A</p>
+                                <p><strong>UOM:</strong> Each</p>
+                                <p class="price"><strong>Price:</strong> R<span class="product-price">82.80</span></p>
+                                <div class="quantity">
+                                    <button onclick="decreaseQuantity(this)">-</button>
+                                    <span class="quantity-value">1</span>
+                                    <button onclick="increaseQuantity(this)">+</button>
+                                </div>
+                                   <div class="buttons">
+                                        <button onclick="addToCart(this)">Add to Cart</button>
+                                   </div>
+                            </div>
+                             <!-- -->
+                       <!------------------------------------------------------------------------------------------------------------------ -->
+
+                              <!--19-->
+                              <div class="product-listing" data-product-id="19" data-product-price="43.10">
+                                <img src="https://via.placeholder.com/150" alt="Product 19">
+                                <h2>Handy Clean</h2>
+                                <p><strong>Stock Type:</strong> In Stock</p>
+                                <p><strong>Reference:</strong> N/A</p>
+                                <p><strong>Brand:</strong> N/A</p>
+                                <p><strong>Description:</strong> Handy Clean - 5 Litre </p>
+                                <p><strong>Colour:</strong> N/A</p>
+                                <p><strong>UOM:</strong> Each</p>
+                                <p class="price"><strong>Price:</strong> R<span class="product-price">43.10</span></p>
+                                <div class="quantity">
+                                    <button onclick="decreaseQuantity(this)">-</button>
+                                    <span class="quantity-value">1</span>
+                                    <button onclick="increaseQuantity(this)">+</button>
+                                </div>
+                                   <div class="buttons">
+                                        <button onclick="addToCart(this)">Add to Cart</button>
+                                   </div>
+                            </div>
+                             <!-- -->
+                       <!------------------------------------------------------------------------------------------------------------------ -->
+
+                              <!--20-->
+                              <div class="product-listing" data-product-id="20" data-product-price="56.35">
+                                <img src="https://via.placeholder.com/150" alt="Product 20">
+                                <h2>All Purpose Cleaner</h2>
+                                <p><strong>Stock Type:</strong> In Stock</p>
+                                <p><strong>Reference:</strong> N/A</p>
+                                <p><strong>Brand:</strong> N/A</p>
+                                <p><strong>Description:</strong> All Purpose Cleaner 5 Litre</p>
+                                <p><strong>Colour:</strong> N/A</p>
+                                <p><strong>UOM:</strong> Each</p>
+                                <p class="price"><strong>Price:</strong> R<span class="product-price">56.35</span></p>
+                                <div class="quantity">
+                                    <button onclick="decreaseQuantity(this)">-</button>
+                                    <span class="quantity-value">1</span>
+                                    <button onclick="increaseQuantity(this)">+</button>
+                                </div>
+                                   <div class="buttons">
+                                        <button onclick="addToCart(this)">Add to Cart</button>
+                                   </div>
+                            </div>
+                             <!-- -->
+                        <!------------------------------------------------------------------------------------------------------------------ -->
+
+                              <!--21-->
+                              <div class="product-listing" data-product-id="21" data-product-price="71.13">
+                                <img src="https://via.placeholder.com/150" alt="Product 21">
+                                <h2>Window Cleaner</h2>
+                                <p><strong>Stock Type:</strong> In Stock</p>
+                                <p><strong>Reference:</strong> N/A</p>
+                                <p><strong>Brand:</strong> N/A</p>
+                                <p><strong>Description:</strong> Window Cleaner 5 Litre</p>
+                                <p><strong>Colour:</strong> N/A</p>
+                                <p><strong>UOM:</strong> Each</p>
+                                <p class="price"><strong>Price:</strong> R<span class="product-price">71.13</span></p>
+                                <div class="quantity">
+                                    <button onclick="decreaseQuantity(this)">-</button>
+                                    <span class="quantity-value">1</span>
+                                    <button onclick="increaseQuantity(this)">+</button>
+                                </div>
+                                   <div class="buttons">
+                                        <button onclick="addToCart(this)">Add to Cart</button>
+                                   </div>
+                            </div>
+                             <!-- -->
+                        <!------------------------------------------------------------------------------------------------------------------ -->
+
+                              <!--22-->
+                              <div class="product-listing" data-product-id="22" data-product-price="60.69">
+                                <img src="https://via.placeholder.com/150" alt="Product 22">
+                                <h2>Broom Household</h2>
+                                <p><strong>Stock Type:</strong> In Stock</p>
+                                <p><strong>Reference:</strong> N/A</p>
+                                <p><strong>Brand:</strong> N/A</p>
+                                <p><strong>Description:</strong> Broom Household - Soft Bristles</p>
+                                <p><strong>Colour:</strong> N/A</p>
+                                <p><strong>UOM:</strong> Each</p>
+                                <p class="price"><strong>Price:</strong> R<span class="product-price">60.69</span></p>
+                                <div class="quantity">
+                                    <button onclick="decreaseQuantity(this)">-</button>
+                                    <span class="quantity-value">1</span>
+                                    <button onclick="increaseQuantity(this)">+</button>
+                                </div>
+                                   <div class="buttons">
+                                        <button onclick="addToCart(this)">Add to Cart</button>
+                                   </div>
+                            </div>
+                             <!-- -->
+                            <!------------------------------------------------------------------------------------------------------------------ -->
+
+                              <!--23-->
+                              <div class="product-listing" data-product-id="23" data-product-price="36.23">
+                                <img src="https://via.placeholder.com/150" alt="Product 23">
+                                <h2>Mop Jumbo</h2>
+                                <p><strong>Stock Type:</strong> In Stock</p>
+                                <p><strong>Reference:</strong> N/A</p>
+                                <p><strong>Brand:</strong> N/A</p>
+                                <p><strong>Description:</strong> Mop Jumbo - Wooden Handle</p>
+                                <p><strong>Colour:</strong> N/A</p>
+                                <p><strong>UOM:</strong> Each</p>
+                                <p class="price"><strong>Price:</strong> R<span class="product-price">36.23</span></p>
+                                <div class="quantity">
+                                    <button onclick="decreaseQuantity(this)">-</button>
+                                    <span class="quantity-value">1</span>
+                                    <button onclick="increaseQuantity(this)">+</button>
+                                </div>
+                                   <div class="buttons">
+                                        <button onclick="addToCart(this)">Add to Cart</button>
+                                   </div>
+                            </div>
+                             <!-- -->
+                            <!------------------------------------------------------------------------------------------------------------------ -->
+
+                              <!--24-->
+                              <div class="product-listing" data-product-id="24" data-product-price="40.00">
+                                <img src="https://via.placeholder.com/150" alt="Product 24">
+                                <h2>Dustpan & Brush</h2>
+                                <p><strong>Stock Type:</strong> In Stock</p>
+                                <p><strong>Reference:</strong> N/A</p>
+                                <p><strong>Brand:</strong> N/A</p>
+                                <p><strong>Description:</strong> Dustpan & Brush </p>
+                                <p><strong>Colour:</strong> N/A</p>
+                                <p><strong>UOM:</strong> Each</p>
+                                <p class="price"><strong>Price:</strong> R<span class="product-price">40.00</span></p>
+                                <div class="quantity">
+                                    <button onclick="decreaseQuantity(this)">-</button>
+                                    <span class="quantity-value">1</span>
+                                    <button onclick="increaseQuantity(this)">+</button>
+                                </div>
+                                   <div class="buttons">
+                                        <button onclick="addToCart(this)">Add to Cart</button>
+                                   </div>
+                            </div>
+                             <!-- -->
+                        <!------------------------------------------------------------------------------------------------------------------ -->
+
+                              <!--25-->
+                              <div class="product-listing" data-product-id="25" data-product-price="62.10">
+                                <img src="https://via.placeholder.com/150" alt="Product 25">
+                                <h2>Dish Washing Liquid AntiBacterial</h2>
+                                <p><strong>Stock Type:</strong> In Stock</p>
+                                <p><strong>Reference:</strong> N/A</p>
+                                <p><strong>Brand:</strong> N/A</p>
+                                <p><strong>Description:</strong> Dish Washing Liquid AntiBacterial - 5 Litre</p>
+                                <p><strong>Colour:</strong> N/A</p>
+                                <p><strong>UOM:</strong> Each</p>
+                                <p class="price"><strong>Price:</strong> R<span class="product-price">62.10</span></p>
+                                <div class="quantity">
+                                    <button onclick="decreaseQuantity(this)">-</button>
+                                    <span class="quantity-value">1</span>
+                                    <button onclick="increaseQuantity(this)">+</button>
+                                </div>
+                                   <div class="buttons">
+                                        <button onclick="addToCart(this)">Add to Cart</button>
+                                   </div>
+                            </div>
+                             <!-- -->
+                  
+                    <!-- Add more canteen products here -->
+                </div>
+         <!------------------------------------------------------------------------------------------------------------------ -->
+        <!------------------------------------------------------------------------------------------------------------------ -->
+
+
+                <!-- Clips Products -->
+                <div class="product" id="clips" data-category="clips">
+                        <!--26-->
+                        <div class="product-listing" data-product-id="26" data-product-price="4.94">
+                                <img src="https://via.placeholder.com/150" alt="Product 26">
+                                <h2>Paper Clips</h2>
+                                <p><strong>Stock Type:</strong> In Stock</p>
+                                <p><strong>Reference:</strong> N/A</p>
+                                <p><strong>Brand:</strong> N/A</p>
+                                <p><strong>Description:</strong> Paper Clips (Large) 33mm Vinyl</p>
+                                <p><strong>Colour:</strong> Assorted</p>
+                                <p><strong>UOM:</strong> Box 100</p>
+                                <p class="price"><strong>Price:</strong> R<span class="product-price">4.94</span></p>
+                                <div class="quantity">
+                                    <button onclick="decreaseQuantity(this)">-</button>
+                                        <span class="quantity-value">1</span>
+                                    <button onclick="increaseQuantity(this)">+</button>
+                                </div>
+                                    <div class="buttons">
+                                        <button onclick="addToCart(this)">Add to Cart</button>
+                                    </div>
+                        </div>
+                        <!-- -->
+                    <!-- Add more clips products here -->
+                </div>
+       <!------------------------------------------------------------------------------------------------------------------ -->
+        <!------------------------------------------------------------------------------------------------------------------ -->
+
+                <!-- Repeat for other categories -->
+                <!-- Company Specific Products -->
+        <div class="product" id="company" data-category="specific-products">
+            <!--27-->
+            <div class="product-listing" data-product-id="27" data-product-price="2065.00">
+                <img src="https://via.placeholder.com/150" alt="Product 27">
+                <h2>Meto Eagle 8.22 Pricing Gun </h2>
+                <p><strong>Stock Type:</strong> In Stock</p>
+                <p><strong>Reference:</strong> N/A</p>
+                <p><strong>Brand:</strong> N/A</p>
+                <p><strong>Description:</strong> Meto Eagle 8.22 Pricing Gun </p>
+                <p><strong>Colour:</strong> N/A</p>
+                <p><strong>UOM:</strong> Each</p>
+                <p class="price"><strong>Price:</strong> R<span class="product-price">2065.00</span></p>
+                <div class="quantity">
+                    <button onclick="decreaseQuantity(this)">-</button>
+                        <span class="quantity-value">1</span>
+                    <button onclick="increaseQuantity(this)">+</button>
+                </div>
+                    <div class="buttons">
+                        <button onclick="addToCart(this)">Add to Cart</button>
+                 </div>
+            </div>
+            <!-- --> 
+          <!------------------------------------------------------------------------------------------------------------------ -->
+            
+            <!--28-->
+            <div class="product-listing" data-product-id="28" data-product-price="73.99">
+                <img src="https://via.placeholder.com/150" alt="Product 28">
+                <h2>Ink Tank</h2>
+                <p><strong>Stock Type:</strong> In Stock</p>
+                <p><strong>Reference:</strong> 664</p>
+                <p><strong>Brand:</strong> Epson</p>
+                <p><strong>Description:</strong> Ink Tank</p>
+                <p><strong>Colour:</strong> Black</p>
+                <p><strong>UOM:</strong> Each</p>
+                <p class="price"><strong>Price:</strong> R<span class="product-price">73.99</span></p>
+                <div class="quantity">
+                    <button onclick="decreaseQuantity(this)">-</button>
+                        <span class="quantity-value">1</span>
+                    <button onclick="increaseQuantity(this)">+</button>
+                </div>
+                    <div class="buttons">
+                        <button onclick="addToCart(this)">Add to Cart</button>
+                 </div>
+            </div>
+            <!-- -->
+             <!------------------------------------------------------------------------------------------------------------------ -->             
+            <!--29-->
+            <div class="product-listing" data-product-id="29" data-product-price="88.10">
+                <img src="https://via.placeholder.com/150" alt="Product 29">
+                <h2>Ink Tank</h2>
+                <p><strong>Stock Type:</strong> In Stock</p>
+                <p><strong>Reference:</strong> 6642</p>
+                <p><strong>Brand:</strong> Epson</p>
+                <p><strong>Description:</strong> Ink Tank</p>
+                <p><strong>Colour:</strong> Cyan</p>
+                <p><strong>UOM:</strong> Each</p>
+                <p class="price"><strong>Price:</strong> R<span class="product-price">88.10</span></p>
+                <div class="quantity">
+                    <button onclick="decreaseQuantity(this)">-</button>
+                        <span class="quantity-value">1</span>
+                    <button onclick="increaseQuantity(this)">+</button>
+                </div>
+                    <div class="buttons">
+                        <button onclick="addToCart(this)">Add to Cart</button>
+                 </div>
+            </div>
+            <!-- --> 
+             <!-------------------------------------------------------------------------------------------------------------------->            
+            <!--30-->
+            <div class="product-listing" data-product-id="30" data-product-price="88.10">
+                <img src="https://via.placeholder.com/150" alt="Product 30">
+                <h2>Ink Tank</h2>
+                <p><strong>Stock Type:</strong> In Stock</p>
+                <p><strong>Reference:</strong> 6643</p>
+                <p><strong>Brand:</strong> Epson</p>
+                <p><strong>Description:</strong> Ink Tank</p>
+                <p><strong>Colour:</strong> Magenta</p>
+                <p><strong>UOM:</strong> Each</p>
+                <p class="price"><strong>Price:</strong> R<span class="product-price">88.10</span></p>
+                <div class="quantity">
+                    <button onclick="decreaseQuantity(this)">-</button>
+                        <span class="quantity-value">1</span>
+                    <button onclick="increaseQuantity(this)">+</button>
+                </div>
+                    <div class="buttons">
+                        <button onclick="addToCart(this)">Add to Cart</button>
+                 </div>
+            </div>
+            <!-- -->             
+            <!-------------------------------------------------------------------------------------------------------------------->
+            <!--31-->
+            <div class="product-listing" data-product-id="31" data-product-price="88.10">
+                <img src="https://via.placeholder.com/150" alt="Product 31">
+                <h2>Ink Tank</h2>
+                <p><strong>Stock Type:</strong> In Stock</p>
+                <p><strong>Reference:</strong> 6644</p>
+                <p><strong>Brand:</strong> Epson</p>
+                <p><strong>Description:</strong> Ink Tank</p>
+                <p><strong>Colour:</strong> Yellow</p>
+                <p><strong>UOM:</strong> Each</p>
+                <p class="price"><strong>Price:</strong> R<span class="product-price">88.10</span></p>
+                <div class="quantity">
+                    <button onclick="decreaseQuantity(this)">-</button>
+                        <span class="quantity-value">1</span>
+                    <button onclick="increaseQuantity(this)">+</button>
+                </div>
+                    <div class="buttons">
+                        <button onclick="addToCart(this)">Add to Cart</button>
+                 </div>
+            </div>
+            <!-- --> 
+            <!-------------------------------------------------------------------------------------------------------------------->            
+            <!--32-->
+            <div class="product-listing" data-product-id="32" data-product-price="25.91">
+                <img src="https://via.placeholder.com/150" alt="Product 32">
+                <h2>B210</h2>
+                <p><strong>Stock Type:</strong> In Stock</p>
+                <p><strong>Reference:</strong> N/A</p>
+                <p><strong>Brand:</strong> N/A</p>
+                <p><strong>Description:</strong> B210 110 x 70 Premium Wax Out Thermal Transfer Ribbon </p>
+                <p><strong>Colour:</strong> Black</p>
+                <p><strong>UOM:</strong> Each</p>
+                <p class="price"><strong>Price:</strong> R<span class="product-price">25.91</span></p>
+                <div class="quantity">
+                    <button onclick="decreaseQuantity(this)">-</button>
+                        <span class="quantity-value">1</span>
+                    <button onclick="increaseQuantity(this)">+</button>
+                </div>
+                    <div class="buttons">
+                        <button onclick="addToCart(this)">Add to Cart</button>
+                 </div>
+            </div>
+            <!-- -->
+            <!-------------------------------------------------------------------------------------------------------------------->             
+            <!--33-->
+            <div class="product-listing" data-product-id="33" data-product-price="153.75">
+                <img src="https://via.placeholder.com/150" alt="Product 33">
+                <h2>Ink Rollers Meto</h2>
+                <p><strong>Stock Type:</strong> In Stock</p>
+                <p><strong>Reference:</strong> N/A</p>
+                <p><strong>Brand:</strong> N/A</p>
+                <p><strong>Description:</strong> Ink Rollers  Meto 321597 Pkt 5 </p>
+                <p><strong>Colour:</strong> Black</p>
+                <p><strong>UOM:</strong> Packet</p>
+                <p class="price"><strong>Price:</strong> R<span class="product-price">153.75</span></p>
+                <div class="quantity">
+                    <button onclick="decreaseQuantity(this)">-</button>
+                        <span class="quantity-value">1</span>
+                    <button onclick="increaseQuantity(this)">+</button>
+                </div>
+                    <div class="buttons">
+                        <button onclick="addToCart(this)">Add to Cart</button>
+                 </div>
+            </div>
+            <!-- --> 
+<!-------------------------------------------------------------------------------------------------------------------->
+            <!--34-->
+            <div class="product-listing" data-product-id="34" data-product-price="12.50">
+                <img src="https://via.placeholder.com/150" alt="Product 34">
+                <h2>Meto White Pricing Labels</h2>
+                <p><strong>Stock Type:</strong> In Stock</p>
+                <p><strong>Reference:</strong> N/A</p>
+                <p><strong>Brand:</strong> N/A</p>
+                <p><strong>Description:</strong> Meto White Pricing Labels 22mm x 12mm (Roll 1500)</p>
+                <p><strong>Colour:</strong> N/A</p>
+                <p><strong>UOM:</strong> Roll</p>
+                <p class="price"><strong>Price:</strong> R<span class="product-price">12.50</span></p>
+                <div class="quantity">
+                    <button onclick="decreaseQuantity(this)">-</button>
+                        <span class="quantity-value">1</span>
+                    <button onclick="increaseQuantity(this)">+</button>
+                </div>
+                    <div class="buttons">
+                        <button onclick="addToCart(this)">Add to Cart</button>
+                 </div>
+            </div>
+            <!-- --> 
+<!-------------------------------------------------------------------------------------------------------------------->
+            <!--35-->
+            <div class="product-listing" data-product-id="35" data-product-price="28.85">
+                <img src="https://via.placeholder.com/150" alt="Product 35">
+                <h2>Meto Red Pricing Labels</h2>
+                <p><strong>Stock Type:</strong> In Stock</p>
+                <p><strong>Reference:</strong> N/A</p>
+                <p><strong>Brand:</strong> N/A</p>
+                <p><strong>Description:</strong> Meto Red Pricing Labels 22mm x 12mm (Roll 1500) </p>
+                <p><strong>Colour:</strong> N/A</p>
+                <p><strong>UOM:</strong> Roll</p>
+                <p class="price"><strong>Price:</strong> R<span class="product-price">28.85</span></p>
+                <div class="quantity">
+                    <button onclick="decreaseQuantity(this)">-</button>
+                        <span class="quantity-value">1</span>
+                    <button onclick="increaseQuantity(this)">+</button>
+                </div>
+                    <div class="buttons">
+                        <button onclick="addToCart(this)">Add to Cart</button>
+                 </div>
+            </div>
+            <!-- -->
+    <!-------------------------------------------------------------------------------------------------------------------->             
+            <!--36-->
+            <div class="product-listing" data-product-id="36" data-product-price="210.38">
+                <img src="https://via.placeholder.com/150" alt="Product 36">
+                <h2>Refuse Bags</h2>
+                <p><strong>Stock Type:</strong> In Stock</p>
+                <p><strong>Reference:</strong> N/A</p>
+                <p><strong>Brand:</strong> N/A</p>
+                <p><strong>Description:</strong> Refuse Bags 40 Micron - Pkt 50 </p>
+                <p><strong>Colour:</strong> Clear</p>
+                <p><strong>UOM:</strong> Packet</p>
+                <p class="price"><strong>Price:</strong> R<span class="product-price">210.38</span></p>
+                <div class="quantity">
+                    <button onclick="decreaseQuantity(this)">-</button>
+                        <span class="quantity-value">1</span>
+                    <button onclick="increaseQuantity(this)">+</button>
+                </div>
+                    <div class="buttons">
+                        <button onclick="addToCart(this)">Add to Cart</button>
+                 </div>
+            </div>
+            <!-- --> 
+    <!-------------------------------------------------------------------------------------------------------------------->            
+            <!--37 -->
+            <div class="product-listing" data-product-id="37" data-product-price="350.00">
+                <img src="https://via.placeholder.com/150" alt="Product 37">
+                <h2>First Aid Box</h2>
+                <p><strong>Stock Type:</strong> In Stock</p>
+                <p><strong>Reference:</strong> N/A</p>
+                <p><strong>Brand:</strong> N/A</p>
+                <p><strong>Description:</strong> First Aid Box Factory Metal Trident</p>
+                <p><strong>Colour:</strong> N/A</p>
+                <p><strong>UOM:</strong> Each</p>
+                <p class="price"><strong>Price:</strong> R<span class="product-price">350.00</span></p>
+                <div class="quantity">
+                    <button onclick="decreaseQuantity(this)">-</button>
+                        <span class="quantity-value">1</span>
+                    <button onclick="increaseQuantity(this)">+</button>
+                </div>
+                    <div class="buttons">
+                        <button onclick="addToCart(this)">Add to Cart</button>
+                 </div>
+            </div>
+            <!-- --> 
+    <!-------------------------------------------------------------------------------------------------------------------->            
+            <!--38 -->
+            <div class="product-listing" data-product-id="38" data-product-price="241.01">
+                <img src="https://via.placeholder.com/150" alt="Product 38">
+                <h2>First Aid Kit</h2>
+                <p><strong>Stock Type:</strong> In Stock</p>
+                <p><strong>Reference:</strong> N/A</p>
+                <p><strong>Brand:</strong> N/A</p>
+                <p><strong>Description:</strong> First Aid Kit Contents Regulation 3 (Reg7 part1)</p>
+                <p><strong>Colour:</strong> N/A</p>
+                <p><strong>UOM:</strong> Each</p>
+                <p class="price"><strong>Price:</strong> R<span class="product-price">241.01</span></p>
+                <div class="quantity">
+                    <button onclick="decreaseQuantity(this)">-</button>
+                        <span class="quantity-value">1</span>
+                    <button onclick="increaseQuantity(this)">+</button>
+                </div>
+                    <div class="buttons">
+                        <button onclick="addToCart(this)">Add to Cart</button>
+                 </div>
+            </div>
+            <!-- --> 
+    <!-------------------------------------------------------------------------------------------------------------------->            
+            <!--39-->
+            <div class="product-listing" data-product-id="39" data-product-price="50.00">
+                <img src="https://via.placeholder.com/150" alt="Product 39">
+                <h2>First Aid Kit</h2>
+                <p><strong>Stock Type:</strong> In Stock</p>
+                <p><strong>Reference:</strong> N/A</p>
+                <p><strong>Brand:</strong> N/A</p>
+                <p><strong>Description:</strong>First Aid Kit Contents Spill Pack MFA</p>
+                <p><strong>Colour:</strong> N/A</p>
+                <p><strong>UOM:</strong> Each</p>
+                <p class="price"><strong>Price:</strong> R<span class="product-price">50.00</span></p>
+                <div class="quantity">
+                    <button onclick="decreaseQuantity(this)">-</button>
+                        <span class="quantity-value">1</span>
+                    <button onclick="increaseQuantity(this)">+</button>
+                </div>
+                    <div class="buttons">
+                        <button onclick="addToCart(this)">Add to Cart</button>
+                 </div>
+            </div>
+            <!-- -->             
+                    <!-- Add more clips products here -->
+                </div>
+                <!-- Repeat for other categories -->
+    <!-------------------------------------------------------------------------------------------------------------------->
+    <!-------------------------------------------------------------------------------------------------------------------->
+                <!-- Clips Products -->
+                <div class="product" id="computer" data-category="computerprint">
+                   <!--40-->
+            <div class="product-listing" data-product-id="40" data-product-price="397.44">
+                <img src="https://via.placeholder.com/150" alt="Product 40">
+                <h2>Canon Inkjet Cartridge</h2>
+                <p><strong>Stock Type:</strong> In Stock</p>
+                <p><strong>Reference:</strong> CL-446XL</p>
+                <p><strong>Brand:</strong> Canon</p>
+                <p><strong>Description:</strong>Inkjet Cartridge High Yield CL-446XL</p>
+                <p><strong>Colour:</strong> Colour</p>
+                <p><strong>UOM:</strong> Each</p>
+                <p class="price"><strong>Price:</strong> R<span class="product-price">397.44</span></p>
+                <div class="quantity">
+                    <button onclick="decreaseQuantity(this)">-</button>
+                        <span class="quantity-value">1</span>
+                    <button onclick="increaseQuantity(this)">+</button>
+                </div>
+                    <div class="buttons">
+                        <button onclick="addToCart(this)">Add to Cart</button>
+                 </div>
+            </div>
+            <!-- -->
+        <!-------------------------------------------------------------------------------------------------------------------->
+                   <!--41-->
+            <div class="product-listing" data-product-id="41" data-product-price="364.20">
+                <img src="https://via.placeholder.com/150" alt="Product 41">
+                <h2>Canon Inkjet Cartridge</h2>
+                <p><strong>Stock Type:</strong> In Stock</p>
+                <p><strong>Reference:</strong> PG-445XL</p>
+                <p><strong>Brand:</strong> Canon</p>
+                <p><strong>Description:</strong>Inkjet Cartridge High Yield PG-445XL</p>
+                <p><strong>Colour:</strong> Black</p>
+                <p><strong>UOM:</strong> Each</p>
+                <p class="price"><strong>Price:</strong> R<span class="product-price">364.20</span></p>
+                <div class="quantity">
+                    <button onclick="decreaseQuantity(this)">-</button>
+                        <span class="quantity-value">1</span>
+                    <button onclick="increaseQuantity(this)">+</button>
+                </div>
+                    <div class="buttons">
+                        <button onclick="addToCart(this)">Add to Cart</button>
+                 </div>
+            </div>
+            <!-- -->
+                    <!-- Add more Correction Materials products here -->
+                </div>
+        <!-------------------------------------------------------------------------------------------------------------------->
+        <!-------------------------------------------------------------------------------------------------------------------->
+                <div class="product" id="correction" data-category="correctionMaterials">
+               <!--42-->
+                <div class="product-listing" data-product-id="42" data-product-price="25.08">
+                    <img src="https://via.placeholder.com/150" alt="Product 42">
+                    <h2>Tipp-Ex (Brush Type)</h2>
+                    <p><strong>Stock Type:</strong> In Stock</p>
+                    <p><strong>Reference:</strong> PG-445XL</p>
+                    <p><strong>Brand:</strong> Tipp-Ex</p>
+                    <p><strong>Description:</strong>Correction Fluid - Sponge Tip Rapid Dry</p>
+                    <p><strong>Colour:</strong> White</p>
+                    <p><strong>UOM:</strong> Each</p>
+                    <p class="price"><strong>Price:</strong> R<span class="product-price">25.08</span></p>
+                    <div class="quantity">
+                    <button onclick="decreaseQuantity(this)">-</button>
+                        <span class="quantity-value">1</span>
+                    <button onclick="increaseQuantity(this)">+</button>
+                    </div>
+                    <div class="buttons">
+                        <button onclick="addToCart(this)">Add to Cart</button>
+                    </div>
+                </div>
+              
+                    <!-- Add more corretion materials products here -->
+                </div>
+        <!-------------------------------------------------------------------------------------------------------------------->
+        <!-------------------------------------------------------------------------------------------------------------------->
+                <div class="product" id="filing" data-category="filing">
+                    <!--43-->
+                    <div class="product-listing" data-product-id="43" data-product-price="16.88">
+                        <img src="https://via.placeholder.com/150" alt="Product 43">
+                        <h2>Clip Board A4</h2>
+                        <p><strong>Stock Type:</strong> In Stock</p>
+                        <p><strong>Reference:</strong> PG-445XL</p>
+                        <p><strong>Brand:</strong> Tipp-Ex</p>
+                        <p><strong>Description:</strong>Clip Board A4 Masonite</p>
+                        <p><strong>Colour:</strong> N/A</p>
+                        <p><strong>UOM:</strong> Each</p>
+                        <p class="price"><strong>Price:</strong> R<span class="product-price">16.88</span></p>
+                        <div class="quantity">
+                        <button onclick="decreaseQuantity(this)">-</button>
+                            <span class="quantity-value">1</span>
+                        <button onclick="increaseQuantity(this)">+</button>
+                        </div>
+                        <div class="buttons">
+                            <button onclick="addToCart(this)">Add to Cart</button>
+                        </div>
+                    </div>
+              
+                    <!-- Add more clips products here -->
+                </div>
+                <div class="product" id="accessories" data-category="generalAccessories">
+              
+                    <!-- Add more highligthers products here -->
+                    <!-- Add more highligthers products here -->
+                </div>
+                <div class="product" id="highlighters" data-category="highlighters">
+              
+                    <!-- Add more label products here -->
+                    <!-- Add more label products here -->
+                </div>
+                <div class="product" id="labels" data-category="labels">
+              
+                    <!-- Add more Legal Forms here -->
+                    <!-- Add more Legal Forms here -->
+                </div>
+                <div class="product" id="legal" data-category="legalForms">
+              
+                    <!-- Add more Markers products here -->
+                    <!-- Add more Markers products here -->
+                </div>
+                <div class="product" id="markers" data-category="markers">
+              
+                    <!-- Add more Paper products here -->
+                </div>
+                <div class="product" id="paper" data-category="paperProducts">
+              
+                    <!-- Add more Punches products here -->
+                    <!-- Add more Punches products here -->
+                </div>
+                <div class="product" id="punches" data-category="punches">
+              
+                    <!-- Add more Stapling products here -->
+                    <!-- Add more Stapling products here -->
+                </div>
+                <div class="product" id="stapling" data-category="staplingProducts">
+              
+                    <!-- Add more Writng Instruments here -->
+                    <!-- Add more Writng Instruments here -->
+                </div>
+                <div class="product" id="writing" data-category="writingInstruements">
+              
+                    <!-- Add more clips products here -->
+                </div>
+                <!-- Repeat for other categories -->
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 My Online Store. All rights reserved.</p>
+        <ul>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </footer>
+    <script src="scripts.js"></script>
+    <script src="nav.js"></script>
+    <script src="category.js"></script>
+    <script src="cart.js"></script>
+</body>
+</html>
